@@ -1155,8 +1155,11 @@ https://www.runoob.com/git/git-server.html
 #### mkdir  文件夹名称    创建文件夹
 
 git clone https://github.com/leijunwei-ai/rrr.git     克隆文件
+
+git -b 分支名  https://github.com/leijunwei-ai/rrr.git 克隆分支
+
 ls -a    查看里面有什么东西
-git branch    查看有那些仓库
+git branch    查看有那些仓库 
 
 ls -a       查看有那些文件
 git  checkout  -b  仓库名         创建仓库
