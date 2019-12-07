@@ -8,7 +8,7 @@
 
 ### 	点击右上角+号，选择新存储库选项，然后创建库
 
-​	![Alt text](/home/han/桌面/Git/创建git仓库.png)
+​	![Alt text](/home/han/桌面/NoteBook/004  Git训练/创建git仓库.png)
 
 ### 3.安装本地git软件
 
@@ -39,11 +39,11 @@ cd ~/.ssh/                                    ：查看是否生成成功
 
 ### 		3.7.打开github社区，选择头像下的设置选项中的SSH和GPC密钥被选项
 
-​	![Alt text](/home/han/桌面/Git/上传密钥.png)
+​	![Alt text](/home/han/桌面/NoteBook/004  Git训练/上传密钥.png)
 
 ### 		3.8.看到上面的GitHub的SSH配置后,在新建一个SSH Key.
 
-​		![](/home/han/桌面/Git/密钥名字及密钥.png)
+​		![](/home/han/桌面/NoteBook/004  Git训练/密钥名字及密钥.png)
 
 ### 		3.9.vim 打开Git的公钥证书.(在上述查看证书的文件夹下)
 
@@ -53,7 +53,7 @@ vim id_rsa.pub
 
 ### 		3.10.打开证书文件，复制文件中全部的文字，到GitHub中的key中	
 
-​		注：无需换行![](/home/han/桌面/Git/复制证书密钥.png)
+​		注：无需换行![](/home/han/桌面/NoteBook/004  Git训练/复制证书密钥.png)
 
 ### 		3.11.验证Git是否配置成功
 
@@ -61,7 +61,7 @@ vim id_rsa.pub
 ssh git@github.com                       ：出现下述话语，配置成功
 ```
 
-![](/home/han/桌面/Git/验证是否配置成功.png)
+![](/home/han/桌面/NoteBook/004  Git训练/验证是否配置成功.png)
 
 ## 4.Git仓库基础操作
 
@@ -225,4 +225,54 @@ han@han-ThinkPad-T420:~/four$ git checkout hcx
 
 本地及远程更新:git push -u origin master -f
 
-![](/home/han/桌面/Git/注意事项.png)
+![](/home/han/桌面/NoteBook/004  Git训练/注意事项.png)
+
+# 6.常用命令
+
+git init 新建一个空的仓库
+
+git status 查看状态
+
+git add . 添加文件
+
+git commit -m '注释' 提交添加的文件并备注说明
+
+git remote add origin git@github.com:jinzhaogit/git.git 连接远程仓库
+
+git push -u origin master 将本地仓库文件推送到远程仓库
+
+git log 查看变更日志
+
+git reset --hard 版本号前六位 回归到指定版本
+
+git branch 查看分支
+
+git branch newname 创建一个叫newname的分支
+
+git checkout newname 切换到叫newname的分支上
+
+git merge newname 把newname分支合并到当前分支上
+
+git pull origin master 将master分支上的内容拉到本地上
+
+克隆指定仓库：git clone  仓库地址
+
+克隆指定分支：git clone -b 分支名 仓库地址
+
+# 7.使用Git命令克隆代码仓库
+
+* 克隆流程
+
+  ##### (1)先在本地新建一个文件夹，把该文件夹作为一个本地仓库。然后使用终端命令进入该文件夹。
+
+  ##### (2)然后初始化版本仓库，命令为：git init.   然后会在这个文件夹下创建一个.[git](https://link.jianshu.com?t=http%3A%2F%2Flib.csdn.net%2Fbase%2Fgit)的隐藏文件.
+
+  ##### (3)然后就可以从Github远程克隆一个版本库，一般都是会在项目的右侧显示：复制这个url即可。
+
+  ##### (4)在终端执行如下代码：git clone *****url地址。   注意：这个命令一定要在刚才的目录下执行,并且需要等待一段时间,因为这是执行下载的命令,所以等待时间的长短与你的网速有关。
+
+  ##### (5)然后就去刚才的目录下查看，发现已经多了一个项目出来，这个项目就是合Github远程仓库克隆下来的项目，此时两者保持同步。现在你就可以对这个项目进行开发了，到时候就可以和Github上的代码进行上传同步，方便的进行[版本控制](https://link.jianshu.com?t=http%3A%2F%2Flib.csdn.net%2Fbase%2Fgit)。也就是说本地会创建一个新的仓库，并自动将github上的分支设为远端分支。
+
+  ##### git clone之后,如果你已经在本地的项目上工作了，只是想从远程代码库上取得它最新的版本，移动到项目的根目录下，并发送：git pull origin master
+
+##### 
